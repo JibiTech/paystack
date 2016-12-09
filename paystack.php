@@ -2,11 +2,11 @@
 /*------------------------------------------------------------------------
  # plg_jeemasms_pg_paystack - Plugin Paystack For JEEMASMS
  #------------------------------------------------------------------------
- # author    Daydah Concepsts Ltd
+ # author    Daydah Concepts Ltd
  # copyright Copyright (C) 2016 daydah.com. All Rights Reserved.
- # @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- # Websites: http://www.daydah.com
- # Technical Support:  Forum - http://www.daydah.com
+ # @license - https://www.gnu.org/licenses/agpl-3.0.en.html GNU/AGPL3
+ # Websites: https://www.daydah.com
+ # Technical Support:  Forum - https://www.daydah.com
  -------------------------------------------------------------------------*/
 
 /*
