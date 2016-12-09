@@ -60,5 +60,10 @@
 			</fieldset>
 			
 		</fields>
-	</config>	
+	</config>
+	<updateservers>
+		<server type="extension" name="Jeema SMS plg_jsms_payment_paystack Update Site" priority="1">
+            <![CDATA[https://raw.githubusercontent.com/DaydahConcepts/paystack/master/version.xml]]>
+		</server>
+	</updateservers>
 </extension>
