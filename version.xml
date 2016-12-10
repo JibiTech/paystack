@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
 	<update>
-		<name>VM Payment - Paystack</name>
+		<name>plg_jsms_payment_paystack</name>
 		<description>
 			<![CDATA[
-				Accept payments via Master Card, Visa and Verve. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.
+				Accept payments via Master Card, Visa and Verve using Paystack. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.
 			]]>
 		</description>
 		<element>paystack</element>
