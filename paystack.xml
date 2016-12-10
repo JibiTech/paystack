@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.4" type="plugin" group="jeemasms" method="upgrade">
+<extension version="3.0" type="plugin" group="jeemasms" method="upgrade">
 	<name>plg_jsms_payment_paystack</name>
 	<author>Daydah Concepts Ltd</author>
 	<creationDate>07-Dec-2016</creationDate>
