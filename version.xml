@@ -2,24 +2,19 @@
 <updates>
 	<update>
 		<name>plg_jsms_payment_paystack</name>
-		<description>
-			<![CDATA[
-				Accept payments via Master Card, Visa and Verve using Paystack. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.
-			]]>
-		</description>
+		<description><![CDATA[Accept payments via Master Card, Visa and Verve using Paystack. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.]]></description>
 		<element>paystack</element>
 		<type>plugin</type>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<infourl title="Paystack URL">
-			https://github.com/DaydahConcepts/paystack/releases/tag/1.0.1
+			https://github.com/DaydahConcepts/paystack/releases/tag/1.0.2
 		</infourl>
 		<downloads>
 		<downloadurl type="upgrade" format="zip">
-			https://github.com/DaydahConcepts/paystack/archive/1.0.1.zip
+			https://github.com/DaydahConcepts/paystack/archive/1.0.2.zip
 		</downloadurl>
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
-		<targetplatform name="joomla" version="3.6"/>
 	</update>
 <updates>
