@@ -16,5 +16,6 @@
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
+		<targetplatform name="joomla" version="3.6"/>
 	</update>
 <updates>
