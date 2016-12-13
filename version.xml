@@ -2,7 +2,7 @@
 <updates>
 	<update>
 		<name>plg_jsms_payment_paystack</name>
-		<description><![CDATA[Accept payments via Master Card, Visa and Verve using Paystack. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.]]></description>
+		<description>Accept payments via Master Card, Visa and Verve using Paystack. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.</description>
 		<element>paystack</element>
 		<type>plugin</type>
 		<folder>jeemasms</folder>
