@@ -65,16 +65,16 @@ class PaystackGatewayReturn{
 		if($this->_pluginparams->get('paystack_live_demo')==0){ $secret_key = $this->_pluginparams->get('paystack_test_secret_key');}
 		else{ $secret_key = $this->_pluginparams->get('paystack_live_secret_key');}
 		
-		//call the function that will create the url and use file get contents to get response from Paystack
-		//returns an array
+		//call the function that will create the url and use file get contents to get response from Paystack. Returns an array
 		$transData = $this->verifyPaystackTransaction($transactionid, $secret_key);
-		
+                $sentreference = '';
+                if(!property_exists($transData, 'reference')){ $sentreference = $transData->reference;}
 		if (!property_exists($transData, 'error') && property_exists($transData, 'status') && ($transData->status === 'success') && (strpos($transData->reference, $transactionid) === 0)) 
 		{
 			// Update order status - From pending to complete
 			$this->_responseArray['layout'] = "success";
 			$this->_responseArray['gateway_txn_id'] = $this->_jinput->get('transaction_id');
-			$this->_responseArray['payment_tranx_id'] = $transactionid;
+			$this->_responseArray['payment_tranx_id'] = $sentreference;
 			$this->_responseArray['gateway_response'] = "Payment Successfull";
 			return $this->_responseArray;
 		}
@@ -83,7 +83,7 @@ class PaystackGatewayReturn{
 		 {
 			$this->_responseArray['layout'] = "failure";
 			$this->_responseArray['gateway_txn_id'] = $this->_jinput->get('transaction_id');
-			$this->_responseArray['payment_tranx_id'] = $transactionid;
+			$this->_responseArray['payment_tranx_id'] = $sentreference;
 			$this->_responseArray['gateway_response'] = "Payment not approved.";
 			return $this->_responseArray;
 		}
@@ -92,16 +92,15 @@ class PaystackGatewayReturn{
 		{
 			$this->_responseArray['layout'] = "pending";
 			$this->_responseArray['gateway_txn_id'] = $this->_jinput->get('transaction_id');
-			$this->_responseArray['payment_tranx_id'] = $transactionid;
+			$this->_responseArray['payment_tranx_id'] = $sentreference;
 			$this->_responseArray['gateway_response'] = "Payment status is Pending.";
 			return $this->_responseArray;
 		}
 	}
 
  private function verifyPaystackTransaction($transactionid, $secret_key){
-	 //$secret_key is either the demo or live secret key from your dashboard.
-	//$transactionid is the transaction reference code sent to the API previously
-	 $transactionStatus        = new stdClass();
+	 /*$secret_key is either the demo or live secret key from your dashboard. $transactionid is the transaction reference code sent to the API previously */
+	 $transactionStatus  = new stdClass();
         $transactionStatus->error = "";
 
         // try a file_get verification
