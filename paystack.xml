@@ -7,7 +7,7 @@
 	<license>Others</license>
 	<authorEmail>support@daydah.com</authorEmail>
 	<authorUrl>www.daydah.com</authorUrl>
-	<version>plg_jsms_payment_paystack-1.0.5</version>
+	<version>1.0.6</version>
 	<description><![CDATA[
             Paystack gateway implementation for JEEMA SMS. Accept payments via Master Card, Visa and Verve. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.
 		]]></description>
