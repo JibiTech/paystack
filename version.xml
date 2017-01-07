@@ -65,4 +65,21 @@
 		<maintainerurl>https://www.daydah.com</maintainerurl>
 		<targetplatform name="joomla" version="3.0"/>
 	</update>
+	
+	<update>
+		<name>plg_jsms_payment_paystack</name>
+		<description>Accept payments via Master Card, Visa and Verve using Paystack. Sign up at Paystack.com for your free account.</description>
+		<element>paystack</element>
+		<type>plugin</type>
+		<folder>jeemasms</folder>
+		<client>0</client>
+		<version>1.0.5</version>
+		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/plg_jsms_payment_paystack-1.0.5</infourl>
+		<downloads>
+		<downloadurl type="upgrade" format="zip">https://github.com/DaydahConcepts/paystack/archive/plg_jsms_payment_paystack-1.0.5.zip</downloadurl>
+		</downloads>
+		<maintainer>Daydah Concepts</maintainer>
+		<maintainerurl>https://www.daydah.com</maintainerurl>
+		<targetplatform name="joomla" version="3.0"/>
+	</update>
 <updates>
