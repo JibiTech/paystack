@@ -68,14 +68,16 @@ class PaystackGatewayReturn{
 		//call the function that will create the url and use file get contents to get response from Paystack. Returns an array
 		$transData = $this->verifyPaystackTransaction($transactionid, $secret_key);
                 $sentreference = '';
-                if(!property_exists($transData, 'reference')){ $sentreference = $transData->reference;}
+                if(property_exists($transData, 'reference')){ $sentreference = $transData->reference;}
+                else if(property_exists($transData, 'paystack-reference')){ $sentreference = $transData->paystack-reference;}
+                
 		if (!property_exists($transData, 'error') && property_exists($transData, 'status') && ($transData->status === 'success') && (strpos($transData->reference, $transactionid) === 0)) 
 		{
 			// Update order status - From pending to complete
 			$this->_responseArray['layout'] = "success";
 			$this->_responseArray['gateway_txn_id'] = $this->_jinput->get('transaction_id');
 			$this->_responseArray['payment_tranx_id'] = $sentreference;
-			$this->_responseArray['gateway_response'] = "Payment Successfull";
+			$this->_responseArray['gateway_response'] = "Payment Successful";
 			return $this->_responseArray;
 		}
 		 
