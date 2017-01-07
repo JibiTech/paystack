@@ -14,7 +14,7 @@
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
-		<targetplatform name="joomla" version="3.0"/>
+		<targetplatform name="joomla" version="3.*"/>
 	</update>
 	<update>
 		<name>plg_jsms_payment_paystack</name>
@@ -30,7 +30,7 @@
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
-		<targetplatform name="joomla" version="3.0"/>
+		<targetplatform name="joomla" version="3.*"/>
 	</update>
 	<update>
 		<name>plg_jsms_payment_paystack</name>
@@ -46,7 +46,7 @@
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
-		<targetplatform name="joomla" version="3.0"/>
+		<targetplatform name="joomla" version="3.*"/>
 	</update>
 	
 	<update>
@@ -63,7 +63,7 @@
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
-		<targetplatform name="joomla" version="3.0"/>
+		<targetplatform name="joomla" version="3.*"/>
 	</update>
 	
 	<update>
@@ -80,6 +80,6 @@
 		</downloads>
 		<maintainer>Daydah Concepts</maintainer>
 		<maintainerurl>https://www.daydah.com</maintainerurl>
-		<targetplatform name="joomla" version="3.0"/>
+		<targetplatform name="joomla" version="3.*"/>
 	</update>
 <updates>
