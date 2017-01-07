@@ -73,7 +73,7 @@
 		<type>plugin</type>
 		<folder>jeemasms</folder>
 		<client>0</client>
-		<version>1.0.5</version>
+		<version>plg_jsms_payment_paystack-1-0-5</version>
 		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/plg_jsms_payment_paystack-1.0.5</infourl>
 		<downloads>
 		<downloadurl type="upgrade" format="zip">https://github.com/DaydahConcepts/paystack/archive/plg_jsms_payment_paystack-1.0.5.zip</downloadurl>
