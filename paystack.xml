@@ -7,7 +7,7 @@
 	<license>Others</license>
 	<authorEmail>support@daydah.com</authorEmail>
 	<authorUrl>www.daydah.com</authorUrl>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<description><![CDATA[
             Paystack gateway implementation for JEEMA SMS. Accept payments via Master Card, Visa and Verve. <a href="https://dashboard.paystack.com/" target="_blank">Click here to sign up for a Paystack account</a>.
 		]]></description>
@@ -35,14 +35,18 @@
 				
 				<field type="spacer" />
 				<field type="note" description="" default="PLG_PG_PAYSTACK_CONFIG"/>
+				<field type="spacer" />
+				 <field type="text" name="paystack_test_secret_key" description="PLG_PG_PAYSTACK_TEST_SECRET_KEY_DESC"
+                       default="" label="PLG_PG_PAYSTACK_TEST_SECRET_KEY_LBL" size="50"/>
+                <field type="text" name="paystack_test_public_key" description="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_DESC"
+                       default="" label="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_LBL" size="50"/>
+				<field type="spacer" />
                 <field type="text" name="paystack_live_secret_key" description="PLG_PG_PAYSTACK_LIVE_SECRET_KEY_DESC"
                        default=""  label="PLG_PG_PAYSTACK_LIVE_SECRET_KEY_LBL" size="50"/>
                 <field type="text" name="paystack_live_public_key" description="PLG_PG_PAYSTACK_LIVE_PUBLIC_KEY_DESC"
                        default="" label="PLG_PG_PAYSTACK_LIVE_PUBLIC_KEY_LBL" size="50"/>
-                <field type="text" name="paystack_test_secret_key" description="PLG_PG_PAYSTACK_TEST_SECRET_KEY_DESC"
-                       default="" label="PLG_PG_PAYSTACK_TEST_SECRET_KEY_LBL" size="50"/>
-                <field type="text" name="paystack_test_public_key" description="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_DESC"
-                       default="" label="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_LBL" size="50"/>
+				
+               
 					   
 			</fieldset>
 			<field type="spacer" />
