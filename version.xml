@@ -6,7 +6,7 @@
 		<element>paystack</element>
 		<type>plugin</type>
 		<folder>jeemasms</folder>
-		<client>0</client>
+		<client>site</client>
 		<version>1.0.1</version>
 		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/1.0.1</infourl>
 		<downloads>
@@ -22,7 +22,7 @@
 		<element>paystack</element>
 		<type>plugin</type>
 		<folder>jeemasms</folder>
-		<client>0</client>
+		<client>site</client>
 		<version>1.0.2</version>
 		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/1.0.2</infourl>
 		<downloads>
@@ -38,7 +38,7 @@
 		<element>paystack</element>
 		<type>plugin</type>
 		<folder>jeemasms</folder>
-		<client>0</client>
+		<client>site</client>
 		<version>1.0.3</version>
 		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/1.0.3</infourl>
 		<downloads>
@@ -55,7 +55,7 @@
 		<element>paystack</element>
 		<type>plugin</type>
 		<folder>jeemasms</folder>
-		<client>0</client>
+		<client>site</client>
 		<version>1.0.4</version>
 		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/1.0.4</infourl>
 		<downloads>
@@ -72,7 +72,7 @@
 		<element>paystack</element>
 		<type>plugin</type>
 		<folder>jeemasms</folder>
-		<client>0</client>
+		<client>site</client>
 		<version>1.0.6</version>
 		<infourl title="Paystack URL">https://github.com/DaydahConcepts/paystack/releases/tag/paystack-1.0.6</infourl>
 		<downloads>
