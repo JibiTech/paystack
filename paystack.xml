@@ -32,6 +32,18 @@
 				</field>
 				
 				<field type="spacer" />
+				<field name="paystack_extra_yes_no" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_PG_PAYSTACK_EXTRA_YESNO" description="PLG_PG_PAYSTACK_EXTRA_YESNO_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				<field type="spacer" />
+				<field name="paystack_extra_type" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_PG_PAYSTACK_EXTRA_TYPE" description="PLG_PG_PAYSTACK_EXTRACHARGESDESC">
+					<option value="0">Percentage</option>
+					<option value="1">Fixed Amount</option>
+				</field>
+				<field type="spacer" />
+				<field type="text" name="paystack_extra_charges_value" description="PLG_PG_PAYSTACK_EXTRACHARGE_VALUEDESC" default="1.5" label="PLG_PG_PAYSTACK_EXTRA_VALUE" size="30"/>
+				
+				<field type="spacer" />
 				<field type="note" description="" default="PLG_PG_PAYSTACK_CONFIG"/>
 				<field type="spacer" />
 				 <field type="text" name="paystack_test_secret_key" description="PLG_PG_PAYSTACK_TEST_SECRET_KEY_DESC"
