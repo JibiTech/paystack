@@ -5,8 +5,8 @@
  # author    Daydah Concepts Ltd
  # copyright Copyright (C) 2016 daydah.com. All Rights Reserved.
  # @license - https://www.gnu.org/licenses/agpl-3.0.en.html GNU/AGPL3
- # Websites: https://www.daydah.com
- # Technical Support:  Forum - https://www.daydah.com
+ # Websites: https://www.github.com/daydah
+ # Technical Support:  Forum - http://www.github.com/daydah
  -------------------------------------------------------------------------*/
 
 /*
@@ -110,8 +110,33 @@ class plgJeemaSMSPaystack extends JPlugin {
 		$secret_key = $pl_secret_key; $public_key = $pl_public_key;
 	}
 	
+private function calcFinalAmount($initialval, $extra1, $extratype, $extraval){ $finvalue = 0;
+	//check if there extra switch is on or off
+	if($extra1 == 0){
+		//then extra switch is off.
+		$finvalue = $initialval;
+	}
+	else{ //the extra switch is on, so we need to calculate final value
+		//check type
+		if($extratype == 0){
+			//then the type is a percentage
+			$finvalue = $finvalue + (($extraval * $initialval)/100);
+		}
+		else{//then the type is a fixed amount
+			$finvalue = $initialval + $extraval;
+		}
+
+	}
+	return $finvalue;
+	}
+	
+	$d_ps_extra = $this->_pluginparams->get('paystack_extra_yes_no');
+	$d_ps_extratype = $this->_pluginparams->get('paystack_extra_type');
+	$d_ps_extraval = $this->_pluginparams->get('paystack_extra_charges_value');
+	$d_ps_initval = $this->_args['package_price'];
+	
   	$currency = $this->_args['payment_currency'];
-  	$package_price = $this->_args['package_price'];
+  	$package_price = calcFinalAmount($d_ps_initval, $d_ps_extra, $d_ps_extratype, $d_ps_extraval);
   	$joomla_user_id = $this->_args['joomla_user_id'];
   	$tranx_id = $this->_args['payment_tranx_id'];
   	$pack_name = $this->_args['package_name'];
