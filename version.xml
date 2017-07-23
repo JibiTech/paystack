@@ -7,10 +7,10 @@
 		<type>plugin</type>
 		<folder>jeemasms</folder>
 		<client>site</client>
-		<version>1.0.9</version>
-		<infourl title="Paystack URL">https://github.com/JibiTech/paystack/releases/tag/1.0.9</infourl>
+		<version>1.1.0</version>
+		<infourl title="Paystack URL">https://github.com/JibiTech/paystack/releases/tag/1.1.0</infourl>
 		<downloads>
-		<downloadurl type="full" format="zip">http://github.com/jibitech/paystack/archive/paystack-1.0.9.zip</downloadurl>
+		<downloadurl type="full" format="zip">http://github.com/jibitech/paystack/archive/paystack-1.1.0.zip</downloadurl>
 		</downloads>
 		<maintainer>Daydah</maintainer>
 		<maintainerurl>https://github.com/JibiTech/paystack.git</maintainerurl>
