@@ -90,6 +90,26 @@ class plgJeemaSMSPaystack extends JPlugin {
 		$this->_apps->redirect('index.php?option=com_jeemasms&'.$tpl.'view=smspackagebuy&Itemid='.$itemid,$msg,$msg_type);
  	}
 
+	private function calcFinalAmount($initialval, $extra1, $extratype, $extraval){ $finvalue = 0;
+	//check if there extra switch is on or off
+	if($extra1 == 0){
+		//then extra switch is off.
+		$finvalue = $initialval;
+	}
+	else{ //the extra switch is on, so we need to calculate final value
+		//check type
+		if($extratype == 0){
+			//then the type is a percentage
+			$finvalue = $finvalue + (($extraval * $initialval)/100);
+		}
+		else{//then the type is a fixed amount
+			$finvalue = $initialval + $extraval;
+		}
+
+	}
+	return $finvalue;
+	}
+	
   private function doPayment(){
   	
   	if($this->_args['mobile']=='1'){ $this->_session->set('ses_mobile',true);	}
@@ -108,26 +128,6 @@ class plgJeemaSMSPaystack extends JPlugin {
 	}
 	else{
 		$secret_key = $pl_secret_key; $public_key = $pl_public_key;
-	}
-	
-private function calcFinalAmount($initialval, $extra1, $extratype, $extraval){ $finvalue = 0;
-	//check if there extra switch is on or off
-	if($extra1 == 0){
-		//then extra switch is off.
-		$finvalue = $initialval;
-	}
-	else{ //the extra switch is on, so we need to calculate final value
-		//check type
-		if($extratype == 0){
-			//then the type is a percentage
-			$finvalue = $finvalue + (($extraval * $initialval)/100);
-		}
-		else{//then the type is a fixed amount
-			$finvalue = $initialval + $extraval;
-		}
-
-	}
-	return $finvalue;
 	}
 	
 	$d_ps_extra = $this->_pluginparams->get('paystack_extra_yes_no');
