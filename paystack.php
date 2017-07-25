@@ -136,7 +136,7 @@ class plgJeemaSMSPaystack extends JPlugin {
 	$d_ps_initval = $this->_args['package_price'];
 	
   	$currency = $this->_args['payment_currency'];
-  	$package_price = calcFinalAmount($d_ps_initval, $d_ps_extra, $d_ps_extratype, $d_ps_extraval);
+  	$package_price = $this->calcFinalAmount($d_ps_initval, $d_ps_extra, $d_ps_extratype, $d_ps_extraval);
   	$joomla_user_id = $this->_args['joomla_user_id'];
   	$tranx_id = $this->_args['payment_tranx_id'];
   	$pack_name = $this->_args['package_name'];
