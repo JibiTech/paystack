@@ -11,7 +11,7 @@
 
 /*
  * ----------------------------------------- CHANGE LOGS -------------------------------------
- * 
+ * -Fixed zero amount percentage addition bug
  * -------------------------------------------------------------------------------------------
  */
 
@@ -90,7 +90,8 @@ class plgJeemaSMSPaystack extends JPlugin {
 		$this->_apps->redirect('index.php?option=com_jeemasms&'.$tpl.'view=smspackagebuy&Itemid='.$itemid,$msg,$msg_type);
  	}
 
-	private function calcFinalAmount($initialval, $extra1, $extratype, $extraval){ $finvalue = 0;
+	private function calcFinalAmount($initialval, $extra1, $extratype, $extraval){ 
+		$finvalue = 0; $calcpercent = 0;
 	//check if there extra switch is on or off
 	if($extra1 == 0){
 		//then extra switch is off.
@@ -100,7 +101,7 @@ class plgJeemaSMSPaystack extends JPlugin {
 		//check type
 		if($extratype == 0){
 			//then the type is a percentage
-			$finvalue = $finvalue + (($extraval * $initialval)/100);
+			$finvalue = $initialval + (($extraval * $initialval)/100);			
 		}
 		else{//then the type is a fixed amount
 			$finvalue = $initialval + $extraval;
