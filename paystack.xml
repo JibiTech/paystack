@@ -7,7 +7,7 @@
 	<license>Others</license>
 	<authorEmail>support@daydah.com</authorEmail>
 	<authorUrl>www.daydah.com</authorUrl>
-	<version>1.1.4</version>
+	<version>1.1.5</version>
 	<description>Paystack gateway implementation for JEEMA SMS. Accept payments via Master Card, Visa and Verve. Click <a href="https://dashboard.paystack.com/" target="_blank">here to sign up for a Paystack account</a>.</description>
 	<files>
 		<filename plugin="paystack">paystack.php</filename>
@@ -24,13 +24,13 @@
 			<fieldset name="basic">
 				<field name="jeemasms_pg_name" type="text" size="40" default="Paystack" label="PLG_PG_GATWAY_NAME" description="PLG_PG_GATWAY_NAME_DESC" />
 				<field name="jeemasms_pg_image" type="text" size="40" default="paystack/images/paystack.png" label="PLG_PG_LOGO" description="PLG_PG_LOGO_DESC" />
-				
+
 				<field type="spacer" />
 				<field name="paystack_live_demo" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_PG_LIVE_DEMO" description="PLG_PG_LIVE_DEMO_DESC">
 					<option value="1">Live</option>
 					<option value="0">Demo</option>
 				</field>
-				
+
 				<field type="spacer" />
 				<field name="paystack_extra_yes_no" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_PG_PAYSTACK_EXTRA_YESNO" description="PLG_PG_PAYSTACK_EXTRA_YESNO_DESC">
 					<option value="1">Yes</option>
@@ -43,37 +43,34 @@
 				</field>
 				<field type="spacer" />
 				<field type="text" name="paystack_extra_charges_value" description="PLG_PG_PAYSTACK_EXTRACHARGE_VALUEDESC" default="1.5" label="PLG_PG_PAYSTACK_EXTRA_VALUE" size="30"/>
-				
+
 				<field type="spacer" />
 				<field type="note" description="" default="PLG_PG_PAYSTACK_CONFIG"/>
 				<field type="spacer" />
-				 <field type="text" name="paystack_test_secret_key" description="PLG_PG_PAYSTACK_TEST_SECRET_KEY_DESC"
-                       default="" label="PLG_PG_PAYSTACK_TEST_SECRET_KEY_LBL" size="50"/>
-                <field type="text" name="paystack_test_public_key" description="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_DESC"
-                       default="" label="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_LBL" size="50"/>
+	 			<field type="text" name="paystack_test_secret_key" description="PLG_PG_PAYSTACK_TEST_SECRET_KEY_DESC" default="" label="PLG_PG_PAYSTACK_TEST_SECRET_KEY_LBL" size="50"/>
+				<field type="text" name="paystack_test_public_key" description="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_DESC" default="" label="PLG_PG_PAYSTACK_TEST_PUBLIC_KEY_LBL" size="50"/>
 				<field type="spacer" />
-                <field type="text" name="paystack_live_secret_key" description="PLG_PG_PAYSTACK_LIVE_SECRET_KEY_DESC"
-                       default=""  label="PLG_PG_PAYSTACK_LIVE_SECRET_KEY_LBL" size="50"/>
-                <field type="text" name="paystack_live_public_key" description="PLG_PG_PAYSTACK_LIVE_PUBLIC_KEY_DESC"
-                       default="" label="PLG_PG_PAYSTACK_LIVE_PUBLIC_KEY_LBL" size="50"/>
-				
-               
-					   
+				<field type="text" name="paystack_live_secret_key" description="PLG_PG_PAYSTACK_LIVE_SECRET_KEY_DESC" default=""  label="PLG_PG_PAYSTACK_LIVE_SECRET_KEY_LBL" size="50"/>
+				<field type="text" name="paystack_live_public_key" description="PLG_PG_PAYSTACK_LIVE_PUBLIC_KEY_DESC" default="" label="PLG_PG_PAYSTACK_LIVE_PUBLIC_KEY_LBL" size="50"/>
+
+				<field type="spacer" />
+				<field name="paystack_number_check" type="radio" class="btn-group btn-group-yesno" default="0" label="Check User Mobile?" description="Do you want to check if the user has a valid mobile number before initiating payment.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
 			</fieldset>
-			<field type="spacer" />
 			<fieldset name="description">
 				<field name="jeemasms_pg_description" type="editor" filter="safehtml" rows="5" cols="25" default="Paystack payment gateway" label="PLG_PG_PAYMENT_GATEWAY" description="PLG_PG_PAYMENT_GATEWAY_DESC" />
 			</fieldset>
 			<fieldset name = "confirmation">
 				<field name="jeemasms_pg_confirmation_heading" type="text" size="50" default="" label="PLG_PG_CONFIRMATION_HEAD" description="PLG_PG_CONFIRMATION_HEAD_DESC" />
-				<field name="jeemasms_pg_confirmation_description" type="editor" filter="safehtml" rows="5" cols="25" default="" label="PLG_PG_CONFIRMATION_TEXT" description="PLG_PG_CONFIRMATION_TEXT_DESC" />			    
+				<field name="jeemasms_pg_confirmation_description" type="editor" filter="safehtml" rows="5" cols="25" default="" label="PLG_PG_CONFIRMATION_TEXT" description="PLG_PG_CONFIRMATION_TEXT_DESC" />
 			</fieldset>
 
 			<fieldset name = "html_form">
 			    <field name="jeemasms_pg_confirmation_html_form_heading" type="text" size="40" default="" label="PLG_PG_CONFIRMATION_FORM_HEADING" description="PLG_PG_CONFIRMATION_FORM_HEADING_DESC" />
 				<field name="jeemasms_pg_confirmation_html_form" type="editor" filter="raw" rows="5" cols="25" default="" label="PLG_PG_CONFIRMATION_HTML_FORM" description="PLG_PG_CONFIRMATION_HTML_FORM_DESC" />
 			</fieldset>
-			
 		</fields>
 	</config>
 	<updateservers>
