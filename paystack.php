@@ -32,7 +32,7 @@ class plgJeemaSMSPaystack extends JPlugin
   private $_user = null;
 
 
-  function plgJeemaSMSPaystack(& $subject, $config)
+  public function __construct(& $subject, $config)
   {
     $this->_plugin = JPluginHelper::getPlugin( 'jeemasms', 'paystack' );
     $this->_pluginparams = new JRegistry( $this->_plugin->params );
